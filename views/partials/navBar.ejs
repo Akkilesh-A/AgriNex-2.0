@@ -1,1 +1,58 @@
-<h1>This is a navBar</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navBar{
+            display: flex;
+            position: absolute;
+            height: 10vh;
+            width: 100%;
+            background-color: white;
+            color: black;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+        .navBarLogo{
+            padding-left: 1vw;
+            padding-top: 1vh;
+            width: 30%;
+        }
+        .navBarList{
+            list-style-type:none;
+            display: flex;
+            justify-content: end;
+            width: 70%;
+            padding-right: 5vh;
+            align-items: center;
+            color: black;
+        }
+        .navBarItems{
+            padding-right: 2vh;
+            font-weight: bolder;
+            text-decoration: none;  
+            cursor: pointer;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navBar">
+        <div class="navBarLogo">
+            <img src="assets/logo.png" href="/" alt="logo" style="height: 8vh; cursor: pointer;">
+        </div>
+        <ul class="navBarList">
+            <li class="navBarItems">Home</li>
+            <li class="navBarItems">|</li>
+            <li class="navBarItems">About</li>
+            <li class="navBarItems">|</li>
+            <li class="navBarItems">Contact</li>
+        </ul>
+    </div>
+</body>
+</html>

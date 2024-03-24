@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgriNex</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-image: url('assets/background-image.jpg');
+            color: whitesmoke;
+            margin-top: 10vh;
+        }
+
+        .landingText{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #mainTitle{
+            font-size: 5rem;
+        }
+        #subText{
+            font-size: 2rem;
+        }
+    </style>
 </head>
-<body>
-    <%- include("partials/navBar.ejs") %>
-    <h1>Welcome To AgriNex</h1>
-    <%- include("partials/footer.ejs") %>
-</body>
+    <body>
+        <%- include("partials/navBar.ejs") %>
+        <div class="landingText">
+            <h1 id="mainTitle">Welcome To AgriNex</h1>
+            <p id="subText">A web3 based crop insurance company</p>   
+        </div>
+      
+        <!-- <%- include("partials/footer.ejs") %> -->
+    </body>
 </html>
