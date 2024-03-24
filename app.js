@@ -1,11 +1,17 @@
-import express from 'express';
+import express from "express";
+import bodyParser from "body-parser";
 
 const app = express();
+const port = 5173;
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-  res.render('index.ejs');
+
+app.get("/", (req, res) => {
+  res.render("index.ejs");
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+// listening to port
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
