@@ -36,12 +36,71 @@
             cursor: pointer;
             font-size: 1.3rem;
             font-weight: bold;
+            animation: slideFromTop 0.5s ease forwards;
+            animation-delay: calc(.1s*var(--i));  
+            transition: .5s ease;      
         }
         .navBarItems:hover{
             transform: scale(1.1);
             color: aqua;
         }
-
+        @keyframes slideFromLeft {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+            }
+            
+        @keyframes slideFromRight {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+            }
+              
+        @keyframes slideFromTop {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+            }
+              
+        @keyframes slideFromBottom {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+            }
+            
+        @keyframes appearFromLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+              }
+            
+        @keyframes popIn {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 <body>
@@ -50,11 +109,11 @@
             <img src="assets/logo.png" href="/" alt="logo" style="height: 8vh; cursor: pointer;">
         </div>
         <ul class="navBarList">
-            <li class="navBarItems">Home</li>
-            <li class="navBarItems">|</li>
-            <li class="navBarItems">About</li>
-            <li class="navBarItems">|</li>
-            <li class="navBarItems">Contact</li>
+            <li class="navBarItems" style="--i:1">Home</li>
+            <li class="navBarItems" style="--i:2">|</li>
+            <li class="navBarItems" style="--i:3">About</li>
+            <li class="navBarItems" style="--i:4">|</li>
+            <li class="navBarItems" style="--i:5">Contact</li>
         </ul>
     </div>
 </body>
